@@ -12,7 +12,7 @@ Your photo never leaves this page. Nothing is uploaded, nothing is counted. Font
 
 The ring is a boundary, not a new face. Take it off anytime. No announcement needed.
 
-Copy `.env.example` to `.env` and set the site and social URLs. Vite reads `VITE_*` at build time.
+Copy `.env.example` to `.env` and set the site and social URLs. Vite reads `VITE_*` at build time. On Netlify, set the same `VITE_*` values as site environment variables.
 
 ```sh
 cp .env.example .env
@@ -22,4 +22,4 @@ pnpm build
 pnpm preview
 ```
 
-Open `dist/` after `pnpm build`, or host that folder on GitHub Pages. Asset paths are relative.
+`netlify.toml` publishes `dist/` from `pnpm build`. Asset paths are relative.
