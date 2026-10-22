@@ -23,3 +23,13 @@ pnpm preview
 ```
 
 `netlify.toml` publishes `dist/` from `pnpm build`. Asset paths are relative.
+
+Local deploys build with `.env`, then upload that `dist/`. Link the site once, then use a draft URL before production:
+
+```sh
+pnpm netlify:link
+pnpm netlify:deploy
+pnpm netlify:deploy:prod
+```
+
+A Git-connected Netlify site still builds on its own and reads `VITE_*` from the site environment, not from this `.env`.

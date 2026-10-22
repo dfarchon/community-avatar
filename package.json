@@ -8,13 +8,17 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "netlify:link": "netlify link",
+    "netlify:deploy": "pnpm build && netlify deploy --dir=dist",
+    "netlify:deploy:prod": "pnpm build && netlify deploy --prod --dir=dist"
   },
   "packageManager": "pnpm@10.28.0",
   "engines": {
     "node": "24.22.1"
   },
   "devDependencies": {
+    "netlify-cli": "27.14.1",
     "typescript": "5.9.3",
     "vite": "8.3.5"
   }
